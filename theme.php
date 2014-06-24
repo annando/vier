@@ -1,14 +1,14 @@
 <?php
 /**
- * Name: Vier
- * Version: 1.1
+ * Name: Vier-Dev
+ * Version: 1.1.dev
  * Author: Fabio <http://kirgroup.com/profile/fabrixxm>
  * Author: Ike <http://pirati.ca/profile/heluecht>
  * Maintainer: Ike <http://pirati.ca/profile/heluecht>
  * Description: "Vier" is a very compact and modern theme. It uses the font awesome font library: http://fortawesome.github.com/Font-Awesome/
  */
 
-function vier_init(&$a) {
+function vier_dev_init(&$a) {
 set_template_engine($a, 'smarty3');
 
 $baseurl = $a->get_baseurl();
