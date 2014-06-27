@@ -535,6 +535,7 @@ nav {
 
 nav .icon {
   color: #ccc;
+  padding:0;
 }
 
 nav a:active,
@@ -670,8 +671,10 @@ nav #nav-help-link,
 nav #nav-search-link,
 nav #nav-directory-link,
 nav #nav-apps-link,
+nav #nav-login-link,
 nav #nav-notifications-linkmenu,
 nav #nav-site-linkmenu,
+nav #nav-contacts-linkmenu,
 nav #nav-user-linklabel {
   float: right;
 }
@@ -684,6 +687,7 @@ nav #nav-search-link .menu-popup,
 nav #nav-directory-link .menu-popup,
 nav #nav-apps-link .menu-popup,
 nav #nav-notifications-linkmenu .menu-popup,
+nav #nav-contacts-linkmenu .menu-popup,
 nav #nav-site-linkmenu .menu-popup {
   right: 0px;
   left: auto;
@@ -2719,3 +2723,13 @@ a.mail-list-link {
         border: none;
 }
 
+.icon.tilted-icon{
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  font-size:115%; /* 5% less than normal icons, because the tilt takes up vertical space */
+  padding-top:1px;
+}
