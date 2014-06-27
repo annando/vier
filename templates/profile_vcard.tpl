@@ -9,18 +9,7 @@
 		<div class="fn label">{{$profile.name}}</div>
 		{{if $profile.edit}}
 			<div class="action">
-			<a class="icon s16 edit ttright" href="#" rel="#profiles-menu" title="{{$profile.edit.3}}"><span>{{$profile.edit.1}}</span></a>
-			<ul id="profiles-menu" class="menu-popup">
-				{{foreach $profile.menu.entries as $e}}
-				<li>
-					<a href="profiles/{{$e.id}}"><img src='{{$e.photo}}'>{{$e.profile_name}}</a>
-				</li>
-				{{/foreach}}
-				<li><a href="profile_photo" >{{$profile.menu.chg_photo}}</a></li>
-				<li><a href="profiles/new" id="profile-listing-new-link">{{$profile.menu.cr_new}}</a></li>
-				<li><a href="profiles" >{{$profile.edit.3}}</a></li>
-								
-			</ul>
+				<a class="icon s16 edit ttright" href="{{$profile.edit.0}}" title="{{$profile.edit.3}}"><span>{{$profile.edit.1}}</span></a>
 			</div>
 		{{else}}
 			<div class="profile-edit-side-div"><a class="profile-edit-side-link icon edit" title="{{$editprofile}}" href="profiles" ></a></div>
