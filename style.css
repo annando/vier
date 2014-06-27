@@ -2021,6 +2021,7 @@ ul.tabs li .active, span.pager_current a {
 .field .onoff {
   float: left;
   width: 80px;
+  margin-right:1em;
 }
 .field .onoff a {
   display: block;
@@ -2028,24 +2029,28 @@ ul.tabs li .active, span.pager_current a {
   background-image: url("../../../images/onoff.jpg");
   background-repeat: no-repeat;
   padding: 4px 2px 2px 2px;
+  font-size:14px;
   height: 16px;
+  line-height:16px;
   text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius:4px;
 }
 .field .onoff .off {
-  border-color: #666666;
-  padding-left: 40px;
+  border-color: #B0B0B0;
+  padding-left: 36px;
   background-position: left center;
   background-color: #cccccc;
-  color: #666666;
-  text-align: right;
+  color: #9C9C9C;
 }
 .field .onoff .on {
-  border-color: #204A87;
-  padding-right: 40px;
+  font-weight:bold;
+  border-color: #8EB8EE;
+  padding-right: 36px;
   background-position: right center;
   background-color: #D7E3F1;
-  color: #204A87;
-  text-align: left;
+  color: #3F69A6;
 }
 .field .hidden {
   display: none!important;
