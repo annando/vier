@@ -2070,12 +2070,11 @@ aside form .field label {
         margin-bottom: 15px;
 }
 
-#profile-edit-links ul { margin: 20px; padding-bottom: 20px; list-style: none; }
+#profile-edit-links ul { margin: 0; padding:0 0 20px 0; list-style: none; }
 
 #profile-edit-links li {
   float: left;
   list-style: none;
-  margin-left: 10px;
 }
 
 .profile-edit-side-div {
@@ -2089,8 +2088,9 @@ aside form .field label {
 } */
 
 #register-form label,
-#profile-edit-form label {
-        width: 300px; float: left;
+#profile-edit-wrapper label {
+  width: 300px;
+  float: left;
 }
 
 .required {
@@ -2724,3 +2724,75 @@ a.mail-list-link {
         border: none;
 }
 
+#profile-edit-wrapper {
+    line-height: 30px;
+}
+#profile-edit-wrapper .field{
+  margin-bottom:0;
+  padding-bottom:0;
+}
+#profile-edit-wrapper input[type=text],
+#profile-edit-wrapper select{
+  width:250px;
+}
+#profile-edit-wrapper #profile-edit-dob select{
+  width:auto;
+}
+#profile-edit-wrapper,
+#profile-edit-wrapper .toggle-section-content{
+  margin-bottom:15px;
+}
+.profile-edit-submit-wrapper{
+  margin-top:15px;
+}
+#profile-edit-default-desc{
+  display:inline-block;
+  padding:15px;
+  width:auto;
+  border:1px solid #511919;
+}
+#profile-edit-wrapper .toggle-section-content{
+  background:#ededed;
+  max-width:599px;
+  padding:5px;
+}
+
+.btn{
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background-color:#ededed;
+  -webkit-border-top-left-radius:0px;
+  -moz-border-radius-topleft:0px;
+  border-top-left-radius:0px;
+  -webkit-border-top-right-radius:0px;
+  -moz-border-radius-topright:0px;
+  border-top-right-radius:0px;
+  -webkit-border-bottom-right-radius:0px;
+  -moz-border-radius-bottomright:0px;
+  border-bottom-right-radius:0px;
+  -webkit-border-bottom-left-radius:0px;
+  -moz-border-radius-bottomleft:0px;
+  border-bottom-left-radius:0px;
+  text-indent:0;
+  border:1px solid #dcdcdc;
+  display:inline-block;
+  color:#777777;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  font-style:normal;
+  height:40px;
+  line-height:40px;
+  padding:0 15px;
+  text-align:center;
+  text-shadow:1px 1px 0px #ffffff;
+}
+  .btn:hover{
+    background-color:#e6e6e6;
+    text-decoration:none;
+  }
+  .btn:active{
+    position:relative;
+    top:1px;
+  }
