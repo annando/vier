@@ -2796,3 +2796,6 @@ a.mail-list-link {
     position:relative;
     top:1px;
   }
+.profile-view-actions{
+  float:right;
+}
