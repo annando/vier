@@ -2093,7 +2093,7 @@ aside form .field label {
 
 #register-form label,
 #profile-edit-wrapper label {
-  width: 300px;
+  width: 200px;
   float: left;
 }
 
@@ -2773,6 +2773,7 @@ a.mail-list-link {
 }
 
 .btn{
+  outline:none;
   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
   box-shadow:inset 0px 1px 0px 0px #ffffff;

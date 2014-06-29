@@ -51,7 +51,7 @@
   <!-- Basic information -->
   <div class="toggle-section js-toggle-section">
     <a class="section-caption js-section-toggler" href="javascript:;">{{$lbl_basic_section}} &raquo;</a>
-    <div class="js-section toggle-section-content">
+    <div class="js-section toggle-section-content hidden">
       
       {{if $multi_profiles}}
         <div id="profile-edit-profile-name-wrapper" >
@@ -68,20 +68,25 @@
         <input type="text" size="32" name="name" id="profile-edit-name" value="{{$name}}" />
       </div>
       <div id="profile-edit-name-end"></div>
-
-      <div id="profile-edit-pdesc-wrapper" >
-        <label id="profile-edit-pdesc-label" for="profile-edit-pdesc" >{{$lbl_title}} </label>
-        <input type="text" size="32" name="pdesc" id="profile-edit-pdesc" value="{{$pdesc}}" />
-      </div>
-      <div id="profile-edit-pdesc-end"></div>
-
-
+      
       <div id="profile-edit-gender-wrapper" >
         <label id="profile-edit-gender-label" for="gender-select" >{{$lbl_gender}} </label>
         {{$gender}}
       </div>
       <div id="profile-edit-gender-end"></div>
-
+      
+      <div id="profile-edit-pdesc-wrapper" >
+        <label id="profile-edit-pdesc-label" for="profile-edit-pdesc" >{{$lbl_title}} </label>
+        <input type="text" size="32" name="pdesc" id="profile-edit-pdesc" value="{{$pdesc}}" />
+      </div>
+      <div id="profile-edit-pdesc-end"></div>
+      
+      <div id="profile-edit-homepage-wrapper" >
+        <label id="profile-edit-homepage-label" for="profile-edit-homepage" >{{$lbl_homepage}} </label>
+        <input type="text" size="32" name="homepage" id="profile-edit-homepage" value="{{$homepage}}" />
+      </div>
+      <div id="profile-edit-homepage-end"></div>
+      
       <div id="profile-edit-dob-wrapper" >
         <label id="profile-edit-dob-label" for="dob-select" >{{$lbl_bd}}</label>
         <div id="profile-edit-dob" >
@@ -89,9 +94,35 @@
         </div>
       </div>
       <div id="profile-edit-dob-end"></div>
-
+      
       {{$hide_friends}}
-
+      
+      <div id="about-jot-wrapper">
+        <div id="about-jot-desc">{{$lbl_about}}</div>
+        <textarea rows="10" cols="72" id="profile-about-text" name="about" style="width:599px;">{{$about}}</textarea>
+      </div>
+      <div id="about-jot-end"></div>
+      
+      <div id="contact-jot-wrapper" >
+        <div id="contact-jot-desc">{{$lbl_social}}</div>
+        <textarea rows="10" cols="72" id="contact-jot-text" name="contact" style="width:599px;">{{$contact}}</textarea>
+      </div>
+      <div id="contact-jot-end"></div>
+      
+      <div id="profile-edit-pubkeywords-wrapper" >
+        <label id="profile-edit-pubkeywords-label" for="profile-edit-pubkeywords" >{{$lbl_pubkey}} </label>
+        <input type="text" size="32" name="pub_keywords" id="profile-edit-pubkeywords" title="{{$lbl_ex2}}" value="{{$pub_keywords}}" />
+      </div>
+      <div id="profile-edit-pubkeywords-desc">{{$lbl_pubdsc}}</div>
+      <div id="profile-edit-pubkeywords-end"></div>
+      
+      <div id="profile-edit-prvkeywords-wrapper" >
+        <label id="profile-edit-prvkeywords-label" for="profile-edit-prvkeywords" >{{$lbl_prvkey}} </label>
+        <input type="text" size="32" name="prv_keywords" id="profile-edit-prvkeywords" title="{{$lbl_ex2}}" value="{{$prv_keywords}}" />
+      </div>
+      <div id="profile-edit-prvkeywords-desc">{{$lbl_prvdsc}}</div>
+      <div id="profile-edit-prvkeywords-end"></div>
+      
       <div class="profile-edit-submit-wrapper" >
         <input type="submit" name="submit" class="profile-edit-submit-button" value="{{$submit}}" />
       </div>
@@ -105,79 +136,7 @@
     <a class="section-caption js-section-toggler" href="javascript:;">{{$lbl_about_section}} &raquo;</a>
     <div class="js-section toggle-section-content hidden">
       
-      <div id="profile-edit-sexual-wrapper" >
-        <label id="profile-edit-sexual-label" for="sexual-select" >{{$lbl_sexual}} </label>
-        {{$sexual}}
-      </div>
-      <div id="profile-edit-sexual-end"></div>
-      
-      <div id="profile-edit-politic-wrapper" >
-        <label id="profile-edit-politic-label" for="profile-edit-politic" >{{$lbl_politic}} </label>
-        <input type="text" size="32" name="politic" id="profile-edit-politic" value="{{$politic}}" />
-      </div>
-      <div id="profile-edit-politic-end"></div>
-      
-      <div id="profile-edit-religion-wrapper" >
-        <label id="profile-edit-religion-label" for="profile-edit-religion" >{{$lbl_religion}} </label>
-        <input type="text" size="32" name="religion" id="profile-edit-religion" value="{{$religion}}" />
-      </div>
-      <div id="profile-edit-religion-end"></div>
-      
-      <div id="about-jot-wrapper">
-        <p id="about-jot-desc">{{$lbl_about}}</p>
-        <textarea rows="10" cols="72" id="profile-about-text" name="about" style="width:599px;">{{$about}}</textarea>
-      </div>
-      <div id="about-jot-end"></div>
-      
-      <div id="likes-jot-wrapper">
-        <p id="likes-jot-desc">{{$lbl_likes}}</p>
-        <textarea rows="10" cols="72" id="likes-jot-text" name="likes" style="width:599px;">{{$likes}}</textarea>
-      </div>
-      <div id="likes-jot-end"></div>
-      
-      <div id="dislikes-jot-wrapper">
-        <p id="dislikes-jot-desc">{{$lbl_dislikes}}</p>
-        <textarea rows="10" cols="72" id="dislikes-jot-text" name="dislikes" style="width:599px;">{{$dislikes}}</textarea>
-      </div>
-      <div id="dislikes-jot-end"></div>
-      
-      <div class="profile-edit-submit-wrapper" >
-        <input type="submit" name="submit" class="profile-edit-submit-button" value="{{$submit}}" />
-      </div>
-      <div class="profile-edit-submit-end"></div>
-      
-    </div>
-  </div>
-  
-  <!-- Contacting -->
-  <div class="toggle-section js-toggle-section">
-    <a class="section-caption js-section-toggler" href="javascript:;">{{$lbl_contacting_section}} &raquo;</a>
-    <div class="js-section toggle-section-content hidden">
-      
-      <div id="profile-edit-homepage-wrapper" >
-        <label id="profile-edit-homepage-label" for="profile-edit-homepage" >{{$lbl_homepage}} </label>
-        <input type="text" size="32" name="homepage" id="profile-edit-homepage" value="{{$homepage}}" />
-      </div>
-      <div id="profile-edit-homepage-end"></div>
-
-      <div id="contact-jot-wrapper" >
-        <p id="contact-jot-desc">{{$lbl_social}}</p>
-        <textarea rows="10" cols="72" id="contact-jot-text" name="contact" style="width:599px;">{{$contact}}</textarea>
-      </div>
-      <div id="contact-jot-end"></div>
-
-      <div class="profile-edit-submit-wrapper" >
-        <input type="submit" name="submit" class="profile-edit-submit-button" value="{{$submit}}" />
-      </div>
-      <div class="profile-edit-submit-end"></div>
-    
-    </div>
-  </div>
-  
-  <!-- Location -->
-  <div class="toggle-section js-toggle-section">
-    <a class="section-caption js-section-toggler" href="javascript:;">{{$lbl_location_section}} &raquo;</a>
-    <div class="js-section toggle-section-content hidden">
+      <div><b>{{$lbl_location_section}}</b></div>
       
       <div id="profile-edit-address-wrapper" >
         <label id="profile-edit-address-label" for="profile-edit-address" >{{$lbl_address}} </label>
@@ -219,48 +178,39 @@
       </div>
       <div id="profile-edit-hometown-end"></div>
       
-      <div class="profile-edit-submit-wrapper" >
-        <input type="submit" name="submit" class="profile-edit-submit-button" value="{{$submit}}" />
-      </div>
-      <div class="profile-edit-submit-end"></div>
+      <br>
       
-    </div>
-  </div>
-  
-  <!-- Interests -->
-  <div class="toggle-section js-toggle-section">
-    <a class="section-caption js-section-toggler" href="javascript:;">{{$lbl_interests_section}} &raquo;</a>
-    <div class="js-section toggle-section-content hidden">
+      <div><b>{{$lbl_preferences_section}}</b></div>
       
-      <div id="interest-jot-wrapper">
-        <p id="interest-jot-desc">{{$lbl_hobbies}}</p>
-        <textarea rows="10" cols="72" id="interest-jot-text" name="interest" style="width:599px;">{{$interest}}</textarea>
+      <div id="profile-edit-sexual-wrapper" >
+        <label id="profile-edit-sexual-label" for="sexual-select" >{{$lbl_sexual}} </label>
+        {{$sexual}}
       </div>
-      <div id="interest-jot-end"></div>
+      <div id="profile-edit-sexual-end"></div>
       
-      <div id="music-jot-wrapper">
-        <p id="music-jot-desc">{{$lbl_music}}</p>
-        <textarea rows="10" cols="72" id="music-jot-text" name="music" style="width:599px;">{{$music}}</textarea>
+      <div id="profile-edit-politic-wrapper" >
+        <label id="profile-edit-politic-label" for="profile-edit-politic" >{{$lbl_politic}} </label>
+        <input type="text" size="32" name="politic" id="profile-edit-politic" value="{{$politic}}" />
       </div>
-      <div id="music-jot-end"></div>
-
-      <div id="book-jot-wrapper">
-        <p id="book-jot-desc">{{$lbl_book}}</p>
-        <textarea rows="10" cols="72" id="book-jot-text" name="book" style="width:599px;">{{$book}}</textarea>
-      </div>
-      <div id="book-jot-end"></div>
+      <div id="profile-edit-politic-end"></div>
       
-      <div id="tv-jot-wrapper">
-        <p id="tv-jot-desc">{{$lbl_tv}}</p>
-        <textarea rows="10" cols="72" id="tv-jot-text" name="tv" style="width:599px;">{{$tv}}</textarea>
+      <div id="profile-edit-religion-wrapper" >
+        <label id="profile-edit-religion-label" for="profile-edit-religion" >{{$lbl_religion}} </label>
+        <input type="text" size="32" name="religion" id="profile-edit-religion" value="{{$religion}}" />
       </div>
-      <div id="tv-jot-end"></div>
+      <div id="profile-edit-religion-end"></div>
       
-      <div id="film-jot-wrapper">
-        <p id="film-jot-desc">{{$lbl_film}}</p>
-        <textarea rows="10" cols="72" id="film-jot-text" name="film" style="width:599px;">{{$film}}</textarea>
+      <div id="likes-jot-wrapper">
+        <div id="likes-jot-desc">{{$lbl_likes}}</div>
+        <textarea rows="10" cols="72" id="likes-jot-text" name="likes" style="width:599px;">{{$likes}}</textarea>
       </div>
-      <div id="film-jot-end"></div>
+      <div id="likes-jot-end"></div>
+      
+      <div id="dislikes-jot-wrapper">
+        <div id="dislikes-jot-desc">{{$lbl_dislikes}}</div>
+        <textarea rows="10" cols="72" id="dislikes-jot-text" name="dislikes" style="width:599px;">{{$dislikes}}</textarea>
+      </div>
+      <div id="dislikes-jot-end"></div>
       
       <div class="profile-edit-submit-wrapper" >
         <input type="submit" name="submit" class="profile-edit-submit-button" value="{{$submit}}" />
@@ -284,51 +234,67 @@
       <label id="profile-edit-howlong-label" for="profile-edit-howlong" > {{$lbl_howlong}} </label>
       <input type="text" size="32" name="howlong" id="profile-edit-howlong" title="{{$lbl_howlong}}" value="{{$howlong}}" />
       <div id="profile-edit-marital-end"></div>
-        
-    <div id="romance-jot-wrapper" >
-      <p id="romance-jot-desc">{{$lbl_love}}</p>
-      <textarea rows="10" cols="72" id="romance-jot-text" name="romance" style="width:599px;">{{$romance}}</textarea>
-    </div>
-    <div id="romance-jot-end"></div>
-    
-    <div id="work-jot-wrapper">
-      <p id="work-jot-desc">{{$lbl_work}}</p>
-      <textarea rows="10" cols="72" id="work-jot-text" name="work" style="width:599px;">{{$work}}</textarea>
-    </div>
-    <div id="work-jot-end"></div>
-    
-    <div id="education-jot-wrapper" >
-      <p id="education-jot-desc">{{$lbl_school}}</p>
-      <textarea rows="10" cols="72" id="education-jot-text" name="education" style="width:599px;">{{$education}}</textarea>
-    </div>
-    <div id="education-jot-end"></div>
-    
-    <div class="profile-edit-submit-wrapper" >
-      <input type="submit" name="submit" class="profile-edit-submit-button" value="{{$submit}}" />
-    </div>
-    <div class="profile-edit-submit-end"></div>
+      
+      <div id="romance-jot-wrapper" >
+        <div id="romance-jot-desc">{{$lbl_love}}</div>
+        <textarea rows="10" cols="72" id="romance-jot-text" name="romance" style="width:599px;">{{$romance}}</textarea>
+      </div>
+      <div id="romance-jot-end"></div>
+      
+      <div id="work-jot-wrapper">
+        <div id="work-jot-desc">{{$lbl_work}}</div>
+        <textarea rows="10" cols="72" id="work-jot-text" name="work" style="width:599px;">{{$work}}</textarea>
+      </div>
+      <div id="work-jot-end"></div>
+      
+      <div id="education-jot-wrapper" >
+        <div id="education-jot-desc">{{$lbl_school}}</div>
+        <textarea rows="10" cols="72" id="education-jot-text" name="education" style="width:599px;">{{$education}}</textarea>
+      </div>
+      <div id="education-jot-end"></div>
+      
+      <div class="profile-edit-submit-wrapper" >
+        <input type="submit" name="submit" class="profile-edit-submit-button" value="{{$submit}}" />
+      </div>
+      <div class="profile-edit-submit-end"></div>
       
     </div>
   </div>
-
-  <!-- Keywords -->
+  
+  <!-- Interests -->
   <div class="toggle-section js-toggle-section">
-    <a class="section-caption js-section-toggler" href="javascript:;">{{$lbl_keywords_section}} &raquo;</a>
+    <a class="section-caption js-section-toggler" href="javascript:;">{{$lbl_interests_section}} &raquo;</a>
     <div class="js-section toggle-section-content hidden">
       
-      <div id="profile-edit-pubkeywords-wrapper" >
-        <label id="profile-edit-pubkeywords-label" for="profile-edit-pubkeywords" >{{$lbl_pubkey}} </label>
-        <input type="text" size="32" name="pub_keywords" id="profile-edit-pubkeywords" title="{{$lbl_ex2}}" value="{{$pub_keywords}}" />
+      <div id="interest-jot-wrapper">
+        <div id="interest-jot-desc">{{$lbl_hobbies}}</div>
+        <textarea rows="10" cols="72" id="interest-jot-text" name="interest" style="width:599px;">{{$interest}}</textarea>
       </div>
-      <div id="profile-edit-pubkeywords-desc">{{$lbl_pubdsc}}</div>
-      <div id="profile-edit-pubkeywords-end"></div>
+      <div id="interest-jot-end"></div>
+      
+      <div id="music-jot-wrapper">
+        <div id="music-jot-desc">{{$lbl_music}}</div>
+        <textarea rows="10" cols="72" id="music-jot-text" name="music" style="width:599px;">{{$music}}</textarea>
+      </div>
+      <div id="music-jot-end"></div>
 
-      <div id="profile-edit-prvkeywords-wrapper" >
-        <label id="profile-edit-prvkeywords-label" for="profile-edit-prvkeywords" >{{$lbl_prvkey}} </label>
-        <input type="text" size="32" name="prv_keywords" id="profile-edit-prvkeywords" title="{{$lbl_ex2}}" value="{{$prv_keywords}}" />
+      <div id="book-jot-wrapper">
+        <div id="book-jot-desc">{{$lbl_book}}</div>
+        <textarea rows="10" cols="72" id="book-jot-text" name="book" style="width:599px;">{{$book}}</textarea>
       </div>
-      <div id="profile-edit-prvkeywords-desc">{{$lbl_prvdsc}}</div>
-      <div id="profile-edit-prvkeywords-end"></div>
+      <div id="book-jot-end"></div>
+      
+      <div id="tv-jot-wrapper">
+        <div id="tv-jot-desc">{{$lbl_tv}}</div>
+        <textarea rows="10" cols="72" id="tv-jot-text" name="tv" style="width:599px;">{{$tv}}</textarea>
+      </div>
+      <div id="tv-jot-end"></div>
+      
+      <div id="film-jot-wrapper">
+        <div id="film-jot-desc">{{$lbl_film}}</div>
+        <textarea rows="10" cols="72" id="film-jot-text" name="film" style="width:599px;">{{$film}}</textarea>
+      </div>
+      <div id="film-jot-end"></div>
       
       <div class="profile-edit-submit-wrapper" >
         <input type="submit" name="submit" class="profile-edit-submit-button" value="{{$submit}}" />
