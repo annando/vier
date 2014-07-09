@@ -51,6 +51,7 @@
 			<li id="nav-contacts-linkmenu" class="nav-menu-icon">
 				<a href="#" rel="#nav-contacts-menu">
 					<span class="icon icon-user s22"></span>
+					<span id="intro-update" class="nav-notify"></span>
 				</a>
 				<ul id="nav-contacts-menu" class="menu-popup">
 					{{if $nav.notifications}}<li><a class="{{$nav.notifications.2}}" href="{{$nav.notifications.0}}" title="{{$nav.notifications.3}}" >{{$nav.introductions.1}}</a><span id="intro-update-li" class="nav-notify"></span></li>{{/if}}
@@ -60,7 +61,7 @@
 			</li>
 			
 			<li id="nav-user-linklabel" class="nav-menu">
-				<a href="#" rel="#nav-user-menu" title="{{$sitelocation}}">{{$userinfo.name}} <span id="intro-update" class="nav-notify"></span></a>
+				<a href="#" rel="#nav-user-menu" title="{{$sitelocation}}">{{$userinfo.name}}</a>
 			</li>
 			<li id="nav-user-linkmenu" class="nav-menu-icon">
 				<a href="#" rel="#nav-user-menu" title="{{$sitelocation}}"><img src="{{$userinfo.icon}}" alt="{{$userinfo.name}}"></a>
