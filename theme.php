@@ -29,7 +29,14 @@ else if ($style == "breathe")
 
 $a->page['htmlhead'] .= <<< EOT
 <script type="text/javascript" src="$baseurl/view/theme/vier/js/jquery.divgrow-1.3.1.f1.min.js"></script>
-<script>
+<script type="text/javascript">
+
+jQuery(function($){
+	$('body').on('click', '.js-section-toggler', function(e){
+		e.preventDefault();
+		$(this).closest('.js-toggle-section').find('.js-section').toggleClass('hidden');
+	});
+});
 
 function collapseHeight(elems) {
 	var elemName = '.wall-item-body:not(.divmore)';
