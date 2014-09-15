@@ -671,6 +671,7 @@ nav #nav-help-link,
 nav #nav-search-link,
 nav #nav-directory-link,
 nav #nav-apps-link,
+nav #nav-apps-link,
 nav #nav-login-link,
 nav #nav-notifications-linkmenu,
 nav #nav-site-linkmenu,
@@ -708,6 +709,10 @@ nav #nav-user-linklabel.selected,
 nav #nav-apps-link.selected {
   background-color: #364e59;
   border-bottom-style: none;
+}
+
+nav #nav-notifications-linkmenu.on .icon-bell:before{
+  content: "\f0f3";
 }
 
 /* nav #nav-community-link { */
