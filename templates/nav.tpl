@@ -45,7 +45,7 @@
 		
 		{{if $userinfo}}
 			<li id="nav-user-linklabel" class="nav-menu">
-				<a href="#" rel="#nav-user-menu" title="{{$sitelocation}}">{{$userinfo.name}}</a>
+				<a href="#" rel="#nav-user-menu" title="{{$sitelocation}}">{{$userinfo.name}}<span id="intro-update" class="nav-notify"></span></a>
 			</li>
 			<li id="nav-user-linkmenu" class="nav-menu-icon">
 				<a href="#" rel="#nav-user-menu" title="{{$sitelocation}}"><img src="{{$userinfo.icon}}" alt="{{$userinfo.name}}"></a>
