@@ -32,6 +32,7 @@
 				<li><a class="{{$nav.directory.2}}" href="{{$nav.directory.0}}" title="{{$nav.directory.3}}" >{{$nav.directory.1}}</a></li>
 			</ul>
 		</li>
+
 		{{if $nav.notifications}}
 			<li  id="nav-notifications-linkmenu" class="nav-menu-icon"><a href="{{$nav.notifications.0}}" rel="#nav-notifications-menu" title="{{$nav.notifications.1}}"><span class="icon s22 icon-bell tilted-icon"></span></a>
 				<span id="notify-update" class="nav-notify"></span>
@@ -60,6 +61,7 @@
 				</ul>
 			</li>
 		{{/if}}
+
 		{{if $nav.login}}
 			<li id="nav-login-link" class="nav-menu">
 				<a class="{{$nav.login.2}}" href="{{$nav.login.0}}" title="{{$nav.login.3}}" >{{$nav.login.1}}</a>
@@ -73,10 +75,11 @@
 				</form>
 			</li>
 		{{/if}}
-		
+
 		{{if $nav.admin}}
 			<li id="nav-admin-link" class="nav-menu">
-				<a class="{{$nav.admin.2}}" href="{{$nav.admin.0}}" title="{{$nav.admin.3}}" >{{$nav.admin.1}}</a>
+				<!-- <a class="{{$nav.admin.2}}" href="{{$nav.admin.0}}" title="{{$nav.admin.3}}" >{{$nav.admin.1}}</a> -->
+				<a class="{{$nav.admin.2}} icon-sliders" href="{{$nav.admin.0}}" title="{{$nav.admin.3}}" ></a>
 			</li>
 		{{/if}}
 		
