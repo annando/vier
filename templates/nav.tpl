@@ -50,6 +50,7 @@
 			</li>
 			<li id="nav-user-linkmenu" class="nav-menu-icon">
 				<a href="#" rel="#nav-user-menu" title="{{$sitelocation}}"><img src="{{$userinfo.icon}}" alt="{{$userinfo.name}}"></a>
+				<span id="mail-update" class="nav-notify"></span></a>
 				<ul id="nav-user-menu" class="menu-popup">
 					{{if $nav.introductions}}<li><a class="{{$nav.introductions.2}}" href="{{$nav.introductions.0}}" title="{{$nav.introductions.3}}" >{{$nav.introductions.1}}</a><span id="intro-update-li" class="nav-notify"></span></li>{{/if}}
 					{{if $nav.contacts}}<li><a class="{{$nav.contacts.2}}" href="{{$nav.contacts.0}}" title="{{$nav.contacts.3}}" >{{$nav.contacts.1}}</a></li>{{/if}}	
