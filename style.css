@@ -741,6 +741,10 @@ nav #nav-user-linkmenu {
 	padding: 5px 10px; */
 }
 
+#mail-update {
+  top: 56px;
+}
+
 .notify-seen {
         background: none repeat scroll 0 0 #DDDDDD;
         }
