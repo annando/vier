@@ -28,24 +28,11 @@ else if ($style == "breathe")
 	$a->page['htmlhead'] .= '<link rel="stylesheet" href="view/theme/vier/breathe.css" type="text/css" media="screen"/>'."\n";
 else if ($style == "plus")
 	$a->page['htmlhead'] .= '<link rel="stylesheet" href="view/theme/vier/plus.css" type="text/css" media="screen"/>'."\n";
+else if ($style == "dark")
+	$a->page['htmlhead'] .= '<link rel="stylesheet" href="view/theme/vier/dark.css" type="text/css" media="screen"/>'."\n";
 
 $a->page['htmlhead'] .= <<< EOT
 <script type="text/javascript">
-
-function collapseHeight(elems) {
-	var elemName = '.wall-item-body:not(.divmore)';
-	if(typeof elems != 'undefined') {
-		elemName = elems + ' ' + elemName;
-	}
-	$(elemName).each(function() {
-		if($(this).height() > 450) {
-			$('html').height($('html').height());
-			$(this).divgrow({ initialHeight: 400, showBrackets: false, speed: 0 });
-			$(this).addClass('divmore');
-			$('html').height('auto');
-		}
-	});
-}
 
 function insertFormatting(comment,BBcode,id) {
 
