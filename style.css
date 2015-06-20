@@ -1344,10 +1344,34 @@ h2 {
 .wall-item-container.comment {
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-left: 80px;
-  width: 665px;
-  width: calc(100% - 90px);
   border-bottom: 1px solid hsl(198, 21%, 79%);
+  margin-left: 80px;
+  width: calc(100% - 90px);
+}
+
+.wall-item-container.thread_level_2 {
+  margin-left: 90px;
+  width: calc(100% - 100px);
+}
+.wall-item-container.thread_level_3 {
+  margin-left: 100px;
+  width: calc(100% - 110px);
+}
+.wall-item-container.thread_level_4 {
+  margin-left: 110px;
+  width: calc(100% - 120px);
+}
+.wall-item-container.thread_level_5 {
+  margin-left: 120px;
+  width: calc(100% - 130px);
+}
+.wall-item-container.thread_level_6 {
+  margin-left: 130px;
+  width: calc(100% - 140px);
+}
+.wall-item-container.thread_level_7 {
+  margin-left: 140px;
+  width: calc(100% - 150px);
 }
 
 .wall-item-container.comment .wall-item-content {
